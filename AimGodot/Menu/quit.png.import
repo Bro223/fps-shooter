@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/quit.png-a2752ada954cab2f957f4675fe6c6416.image"
+
+[deps]
+
+source_file="res://Menu/quit.png"
+dest_files=[ "res://.import/quit.png-a2752ada954cab2f957f4675fe6c6416.image" ]
+
+[params]
+

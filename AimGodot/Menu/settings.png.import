@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/settings.png-c5ec09d5a3c0bc4bbc34208b9dd87c4a.image"
+
+[deps]
+
+source_file="res://Menu/settings.png"
+dest_files=[ "res://.import/settings.png-c5ec09d5a3c0bc4bbc34208b9dd87c4a.image" ]
+
+[params]
+

@@ -33,7 +33,7 @@ _global_script_class_icons={
 [application]
 
 config/name="AimTraining"
-run/main_scene="res://src/Fun/Main.tscn"
+run/main_scene="res://Hard/Hard.tscn"
 config/icon="res://Assets/Images/icon.png"
 
 [autoload]
