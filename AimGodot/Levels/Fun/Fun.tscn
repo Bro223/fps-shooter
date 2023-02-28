@@ -1,15 +1,17 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://src/Fun/ShowSpeed.gd" type="Script" id=1]
 [ext_resource path="res://src/Fun/Sensitivity/SensShow.gd" type="Script" id=2]
 [ext_resource path="res://src/Fun/Targets/ScoreCounter.gd" type="Script" id=3]
-[ext_resource path="res://Fun/Fun.gd" type="Script" id=4]
+[ext_resource path="res://Levels/Fun/Fun.gd" type="Script" id=4]
 [ext_resource path="res://src/Fun/Player/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Fun/Targets/TargetManager.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Fun/Scene/Ground.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Fun/Targets/Score.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Fun/Sensitivity/Sens.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Fun/Speed/speed.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Pausemenu/GUI.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/Fun/background.PNG" type="Texture" id=12]
 
 [sub_resource type="SpatialMaterial" id=14]
 albedo_color = Color( 0.67451, 0.67451, 0.67451, 1 )
@@ -36,8 +38,17 @@ viewport_path = NodePath("World/Sens2")
 [sub_resource type="ViewportTexture" id=24]
 viewport_path = NodePath("World/Speed/ShowSpeed")
 
+[sub_resource type="PanoramaSky" id=10]
+panorama = ExtResource( 12 )
+
+[sub_resource type="Environment" id=25]
+background_mode = 2
+background_sky = SubResource( 10 )
+
 [node name="Main" type="Node"]
 script = ExtResource( 4 )
+
+[node name="GUI" parent="." instance=ExtResource( 11 )]
 
 [node name="World" type="Spatial" parent="."]
 
@@ -174,6 +185,9 @@ transparent_bg = true
 script = ExtResource( 1 )
 
 [node name="Speed" parent="World/Speed/ShowSpeed" instance=ExtResource( 10 )]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 25 )
 
 [connection signal="sens" from="World/Player" to="World/Sens2" method="_on_Player_sens"]
 [connection signal="speedD" from="World/TargetManager" to="World/Speed/ShowSpeed" method="_on_TargetManager_speedD"]
