@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/play.png-cbf29f8bd8c069e032772bca04b4bdde.image"
+
+[deps]
+
+source_file="res://Assets/Menu/play.png"
+dest_files=[ "res://.import/play.png-cbf29f8bd8c069e032772bca04b4bdde.image" ]
+
+[params]
+

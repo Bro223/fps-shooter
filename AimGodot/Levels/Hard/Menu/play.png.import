@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/play.png-bdbadf90512b83a00e914c4636c758e8.image"
+
+[deps]
+
+source_file="res://Levels/Hard/Menu/play.png"
+dest_files=[ "res://.import/play.png-bdbadf90512b83a00e914c4636c758e8.image" ]
+
+[params]
+

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Menu/Menu.gd" type="Script" id=1]
 [ext_resource path="res://Menu/fun.png" type="Texture" id=2]
 [ext_resource path="res://Menu/speed.png" type="Texture" id=3]
 [ext_resource path="res://Menu/hard.png" type="Texture" id=4]
 [ext_resource path="res://Menu/taust.png" type="Texture" id=5]
+[ext_resource path="res://Menu/quit.png" type="Texture" id=6]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -22,9 +23,9 @@ texture = ExtResource( 5 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 757.0
-margin_top = 381.0
+margin_top = 328.0
 margin_right = 1163.0
-margin_bottom = 698.0
+margin_bottom = 752.0
 
 [node name="Fun" type="TextureButton" parent="CenterContainer/VBoxContainer"]
 margin_right = 406.0
@@ -43,6 +44,13 @@ margin_right = 406.0
 margin_bottom = 317.0
 texture_normal = ExtResource( 4 )
 
+[node name="Quit" type="TextureButton" parent="CenterContainer/VBoxContainer"]
+margin_top = 321.0
+margin_right = 406.0
+margin_bottom = 424.0
+texture_normal = ExtResource( 6 )
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Fun" to="." method="_on_Fun_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Speed" to="." method="_on_Speed_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Hard" to="." method="_on_Hard_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]

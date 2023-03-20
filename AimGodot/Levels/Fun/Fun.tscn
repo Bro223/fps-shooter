@@ -1,20 +1,24 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
-[ext_resource path="res://src/Fun/ShowSpeed.gd" type="Script" id=1]
-[ext_resource path="res://src/Fun/Sensitivity/SensShow.gd" type="Script" id=2]
-[ext_resource path="res://src/Fun/Targets/ScoreCounter.gd" type="Script" id=3]
+[ext_resource path="res://src/Important/Targets/ShowSpeed.gd" type="Script" id=1]
+[ext_resource path="res://src/Important/Sensitivity/SensShow.gd" type="Script" id=2]
+[ext_resource path="res://Levels/Hard/ScoreCounter.gd" type="Script" id=3]
 [ext_resource path="res://Levels/Fun/Fun.gd" type="Script" id=4]
-[ext_resource path="res://src/Fun/Player/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/Fun/Targets/TargetManager.tscn" type="PackedScene" id=6]
-[ext_resource path="res://src/Fun/Scene/Ground.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/Fun/Targets/Score.tscn" type="PackedScene" id=8]
-[ext_resource path="res://src/Fun/Sensitivity/Sens.tscn" type="PackedScene" id=9]
-[ext_resource path="res://src/Fun/Speed/speed.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/Important/Player/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Levels/Fun/TargetManager2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Important/Player/Scene/Ground.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Levels/Hard/Score.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Important/Sensitivity/Sens.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Important/Speed/speed.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Pausemenu/GUI.tscn" type="PackedScene" id=11]
-[ext_resource path="res://src/Fun/background.PNG" type="Texture" id=12]
+[ext_resource path="res://src/Important/background.PNG" type="Texture" id=12]
+[ext_resource path="res://Pausemenu/GUI.gd" type="Script" id=13]
+[ext_resource path="res://Qatar-Gets-A-Forest.png" type="Texture" id=14]
 
 [sub_resource type="SpatialMaterial" id=14]
 albedo_color = Color( 0.67451, 0.67451, 0.67451, 1 )
+albedo_texture = ExtResource( 14 )
+uv1_scale = Vector3( 3, 2, 1 )
 
 [sub_resource type="CubeMesh" id=16]
 material = SubResource( 14 )
@@ -49,13 +53,14 @@ background_sky = SubResource( 10 )
 script = ExtResource( 4 )
 
 [node name="GUI" parent="." instance=ExtResource( 11 )]
+script = ExtResource( 13 )
 
 [node name="World" type="Spatial" parent="."]
 
 [node name="Player" parent="World" instance=ExtResource( 5 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 1.2, -42 )
 
-[node name="TargetManager" parent="World" instance=ExtResource( 6 )]
+[node name="TargetManager2" parent="World" instance=ExtResource( 6 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 40 )
 
 [node name="Level" type="Spatial" parent="World"]
@@ -175,6 +180,7 @@ script = ExtResource( 2 )
 
 [node name="Speed" type="Sprite3D" parent="World"]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 30.0997, 19.2848, 48.489 )
+visible = false
 flip_h = true
 flip_v = true
 texture = SubResource( 24 )
@@ -190,5 +196,3 @@ script = ExtResource( 1 )
 environment = SubResource( 25 )
 
 [connection signal="sens" from="World/Player" to="World/Sens2" method="_on_Player_sens"]
-[connection signal="speedD" from="World/TargetManager" to="World/Speed/ShowSpeed" method="_on_TargetManager_speedD"]
-[connection signal="speedI" from="World/TargetManager" to="World/Speed/ShowSpeed" method="_on_TargetManager_speedI"]

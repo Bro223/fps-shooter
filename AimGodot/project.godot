@@ -12,17 +12,17 @@ _global_script_classes=[ {
 "base": "RigidBody",
 "class": "Bullet",
 "language": "GDScript",
-"path": "res://src/MachineGun/Bullet.gd"
+"path": "res://src/Important/Gun/RifleStuff/Bullet.gd"
 }, {
 "base": "Spatial",
 "class": "Gun",
 "language": "GDScript",
-"path": "res://src/MachineGun/Gun.gd"
+"path": "res://src/Important/Gun/RifleStuff/Gun.gd"
 }, {
 "base": "Spatial",
 "class": "TrailRenderer",
 "language": "GDScript",
-"path": "res://src/MachineGun/TrailRender.gd"
+"path": "res://src/Important/Gun/RifleStuff/TrailRender.gd"
 } ]
 _global_script_class_icons={
 "Bullet": "",
@@ -38,7 +38,7 @@ config/icon="res://Assets/Images/icon.png"
 
 [autoload]
 
-Events="*res://src/Fun/Singeltons/Events.gd"
+Events="*res://src/Important/Player/Singeltons/Events.gd"
 
 [input]
 
@@ -90,6 +90,11 @@ speed3={
 pause={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+start={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777221,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
 

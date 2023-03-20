@@ -8,8 +8,12 @@ func _on_Fun_pressed():
 
 
 func _on_Speed_pressed():
-	get_tree().change_scene("res://Fun/Main2.tscn")
+	get_tree().change_scene("res://Levels/Speed/Speed.tscn")
 
 
 func _on_Hard_pressed():
-	get_tree().change_scene("res://Levels/Hard/Hard.tscn")
+	get_tree().change_scene("res://Menu/Level.tscn")
+
+
+func _on_Quit_pressed():
+	get_tree().quit()

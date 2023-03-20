@@ -3,5 +3,5 @@
 [ext_resource path="res://Assets/Fonts/VCR/VCR_OSD_MONO.ttf" type="DynamicFontData" id=1]
 
 [resource]
-size = 60
+size = 64
 font_data = ExtResource( 1 )
