@@ -12,15 +12,19 @@ func _ready() -> void:
 	Events.connect("target_hit", self, "_raise_target")
 	_raise_target()
 	emit_signal("speedD",speed)
-	
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("start"):
-		_on_Timers_timeout()
+		_on_Timer_timeout()
 	if seconds == 0:
 		visible = true
 	if seconds2 == 0:
 		visible = false
+		if Input.is_action_just_pressed("Restart"):
+			visible = false
+			seconds = 4
+			seconds2 = 34
+
 	if Input.is_action_just_pressed("speed1"):
 		speed += 1
 		emit_signal("speedI",speed)
@@ -38,6 +42,6 @@ func _raise_target() -> void:
 func _choose_target() -> int:
 	return randi() % get_child_count()
 
-func _on_Timers_timeout():
-	seconds -= 1
-	seconds2 -= 1
+func _on_Timer_timeout():
+	seconds -=1
+	seconds2 -=1

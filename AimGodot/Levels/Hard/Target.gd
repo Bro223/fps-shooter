@@ -19,9 +19,6 @@ func down() -> void:
 
 func _on_Area_body_entered(body: Node) -> void:
 	if body.is_in_group("Bullet") and is_up:
-		sounds.shuffle()
-		sound.stream = sounds[0]
-		sound .play()
 		down()
 		Events.emit_signal("target_hit")
 

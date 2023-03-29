@@ -239,6 +239,8 @@ script = ExtResource( 3 )
 
 [node name="Score" parent="World/ScoreCounter" instance=ExtResource( 11 )]
 
+[node name="Timerdsa" type="Timer" parent="World/ScoreCounter"]
+
 [node name="Sens" type="Sprite3D" parent="World"]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, -31.4745, 19.3593, 48.5146 )
 flip_h = true
@@ -270,6 +272,7 @@ script = ExtResource( 2 )
 environment = SubResource( 11 )
 
 [connection signal="timeout" from="World/Sprite3D/Timer/Timers" to="World/Sprite3D/Timer" method="_on_Timers_timeout"]
-[connection signal="timeout" from="World/Sprite3D/Timer/Timers" to="World/TargetManager" method="_on_Timers_timeout"]
 [connection signal="sens" from="World/Player" to="World/Sens2" method="_on_Player_sens"]
+[connection signal="timeout" from="World/ScoreView/Timer" to="World/TargetManager" method="_on_Timer_timeout"]
 [connection signal="timeout" from="World/ScoreView/Timer" to="World/ScoreView" method="_on_Timer_timeout"]
+[connection signal="timeout" from="World/ScoreCounter/Timerdsa" to="World/ScoreCounter" method="_on_Timerdsa_timeout"]

@@ -2,7 +2,7 @@ extends Spatial
 
 export (Array, AudioStream) var sounds = []
 
-onready var sound = $PingSound
+onready var sounde = $PingSound
 var count: int = 0
 var is_up: bool = false
 

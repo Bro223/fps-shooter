@@ -2,12 +2,24 @@ extends Viewport
 
 var score: int = 0
 var shoots: float = 0
+var seconds: int = 34
+var scorehistory: int = 0
+var shoothistory: int = 0
 
 func _ready() -> void:
 	Events.connect("target_hit", self, "_on_hit")
 	Events.connect("gun_fired", self, "_on_fire")
 	_update_board()
 
+func _process(delta):
+	if Input.is_action_just_pressed("start"):
+		_on_Timerdsa_timeout()
+	if seconds == 0:
+		$Timerdsa.stop()
+		if Input.is_action_just_pressed("Restart"):
+			seconds = 34
+			shoots = 0
+			score = 0
 
 func _on_hit() -> void:
 	score += 1
@@ -25,3 +37,7 @@ func _update_board() -> void:
 	$Score/HBoxContainer/Accuracy/Count.text = str("%d" % [acc * 100], "%")
 	render_target_update_mode = Viewport.UPDATE_ONCE
 
+
+func _on_Timerdsa_timeout():
+	seconds -= 1
+	$Timerdsa.start()

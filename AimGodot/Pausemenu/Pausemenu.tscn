@@ -50,6 +50,43 @@ margin_right = 83.0
 margin_bottom = 92.0
 text = "Quit"
 
+[node name="Node2D" type="Node2D" parent="CenterContainer/VBoxContainer"]
+position = Vector2( 40, 8 )
+
+[node name="Keys" type="Label" parent="CenterContainer/VBoxContainer/Node2D"]
+margin_left = -36.0
+margin_top = -114.0
+margin_right = 27.0
+margin_bottom = -100.0
+text = "KEYBINDS"
+
+[node name="Sens" type="Label" parent="CenterContainer/VBoxContainer/Node2D"]
+margin_left = -57.0
+margin_top = -79.0
+margin_right = 136.0
+margin_bottom = -31.0
+text = "SENSITIVITY: 
+Increase - PageUp
+Decrease - PageDown"
+
+[node name="Speed" type="Label" parent="CenterContainer/VBoxContainer/Node2D"]
+margin_left = -169.0
+margin_top = -79.0
+margin_right = -74.0
+margin_bottom = -31.0
+text = "TARGET SPEED:
+Increase - 1
+Decrease - 2"
+
+[node name="Timer" type="Label" parent="CenterContainer/VBoxContainer/Node2D"]
+margin_left = 97.0
+margin_top = -79.0
+margin_right = 192.0
+margin_bottom = -31.0
+text = "TIMER:
+Start - Enter
+Restart - R"
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Resume" to="." method="_on_Resume_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Main Menu" to="." method="_on_Main_Menu_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]

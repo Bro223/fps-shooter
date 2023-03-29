@@ -15,6 +15,10 @@ func _process(delta):
 			$Timer/VBoxContainer/Timer/.text = str(seconds2)
 		else:
 			$Timers.stop()
+			if Input.is_action_just_pressed("Restart"):
+				seconds2 = 34
+				seconds = 3
+				$Timer/VBoxContainer/Timer/.text = str(seconds)
 
 func _on_Timers_timeout():
 	seconds -= 1

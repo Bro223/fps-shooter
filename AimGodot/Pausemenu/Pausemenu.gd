@@ -1,6 +1,7 @@
 extends Control
 
 var is_paused = false setget set_is_paused
+onready var sens = $CenterContainer/Node2D/HSlider
 
 func _unhandled_input(event):
 	if event.is_action_pressed("pause"):
@@ -26,3 +27,9 @@ func _on_Quit_pressed():
 func _on_Main_Menu_pressed():
 	get_tree().change_scene("res://Menu/Menu.tscn")
 	self.is_paused = false
+
+
+func _on_Settings_pressed():
+	get_tree().change_scene("res://Pausemenu/SettingsMenu.tscn")
+
+
