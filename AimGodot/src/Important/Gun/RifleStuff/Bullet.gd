@@ -1,16 +1,9 @@
 extends RigidBody
 class_name Bullet
 
-##############################
-# EXPORT PARAMS
-##############################
 export var lifetime: float = 2
 
-
-##############################
-# FUNCTIONS
-##############################
-func fire(muzzle_velocity: float) -> void:# create timer and set queue_free on timeout
+func fire(muzzle_velocity: float) -> void:
 	var death_timer = Timer.new()
 	add_child(death_timer)
 	death_timer.connect("timeout", self, "queue_free")

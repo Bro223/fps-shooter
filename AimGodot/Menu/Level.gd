@@ -17,3 +17,7 @@ func _on_Medium_pressed():
 
 func _on_Hard_pressed():
 	get_tree().change_scene("res://Levels/Hard/HardHard/HardHard.tscn")
+
+
+func _on_Prog_pressed():
+	get_tree().change_scene("res://Levels/Hard/HardProgressiv/HardProg.tscn")
