@@ -1,5 +1,6 @@
 extends Spatial
 
+
 var previous: int = -1
 var speed: int = 1
 var seconds: int = 4
@@ -14,17 +15,6 @@ func _ready() -> void:
 	emit_signal("speedD",speed)
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("start"):
-		_on_Timer_timeout()
-	if seconds == 0:
-		visible = true
-	if seconds2 == 0:
-		visible = false
-	if Input.is_action_just_pressed("Restart"):
-		visible = false
-		seconds = 4
-		seconds2 = 34
-
 	if Input.is_action_just_pressed("speed1"):
 		speed += 1
 		emit_signal("speedI",speed)
@@ -41,7 +31,3 @@ func _raise_target() -> void:
 
 func _choose_target() -> int:
 	return randi() % get_child_count()
-
-func _on_Timer_timeout():
-	seconds -=1
-	seconds2 -=1

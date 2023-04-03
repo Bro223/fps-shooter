@@ -20,6 +20,7 @@ func _process(delta):
 		_on_Timerdsa_timeout()
 	if seconds == 0:
 		$Timerdsa.stop()
+		_update_board()
 		scorehistory = score
 		shoothistory = shoots
 		emit_signal("scr",scorehistory)

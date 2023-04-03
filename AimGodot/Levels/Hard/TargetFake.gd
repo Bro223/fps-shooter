@@ -20,10 +20,10 @@ func _process(delta: float) -> void:
 		visible = true
 	if seconds2 == 0:
 		visible = false
-	if Input.is_action_just_pressed("Restart"):
-		visible = false
-		seconds = 4
-		seconds2 = 34
+		if Input.is_action_just_pressed("Restart"):
+			visible = false
+			seconds = 4
+			seconds2 = 34
 
 	if Input.is_action_just_pressed("speed1"):
 		speed += 1

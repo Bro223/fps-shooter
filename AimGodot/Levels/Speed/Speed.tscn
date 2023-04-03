@@ -189,11 +189,12 @@ mesh = SubResource( 4 )
 [node name="Lights" type="Spatial" parent="World/Level"]
 
 [node name="OmniLight" type="OmniLight" parent="World/Level/Lights"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.7267, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19561, 22.8175, 0.115379 )
 light_energy = 0.5
 omni_range = 200.0
 
 [node name="Obstacles" type="Spatial" parent="World/Level"]
+visible = false
 
 [node name="1x3x1" type="StaticBody" parent="World/Level/Obstacles"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.545, 0, -22.3486 )

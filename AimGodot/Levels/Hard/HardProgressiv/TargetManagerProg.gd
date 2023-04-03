@@ -11,10 +11,13 @@ func _ready() -> void:
 	Events.connect("target_hit", self, "_raise_target")
 	_raise_target()
 	emit_signal("speedD",1)
+	emit_signal("speedI",1)
 	yield(get_tree().create_timer(22), "timeout")
 	emit_signal("speedD",2)
+	emit_signal("speedI",2)
 	yield(get_tree().create_timer(20), "timeout")
 	emit_signal("speedD",3)
+	emit_signal("speedI",3)
 
 func _raise_target() -> void:
 	var new_target = _choose_target()

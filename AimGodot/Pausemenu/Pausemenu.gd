@@ -28,3 +28,7 @@ func _on_Main_Menu_pressed():
 
 func _on_Settings_pressed():
 	get_tree().change_scene("res://Pausemenu/SettingsMenu.tscn")
+
+
+func _on_Toggle_pressed():
+	OS.window_fullscreen = !OS.window_fullscreen
