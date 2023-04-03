@@ -3,7 +3,7 @@
 [ext_resource path="res://src/Important/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Hard/Score.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Important/Sensitivity/Sens.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Levels/Hard/TargetManager.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Levels/Hard/TargetFake.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Important/Speed/speed.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Important/Player/Scene/Ground.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Important/Sensitivity/SensShow.gd" type="Script" id=7]
@@ -15,7 +15,7 @@
 [ext_resource path="res://Pausemenu/GUI.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Pausemenu/GUI.gd" type="Script" id=14]
 [ext_resource path="res://Qatar-Gets-A-Forest.png" type="Texture" id=15]
-[ext_resource path="res://Levels/Hard/HardHard/TargetManagerHard.gd" type="Script" id=16]
+[ext_resource path="res://Levels/Hard/HardProgressiv/TargetManagerProg.tscn" type="PackedScene" id=16]
 
 [sub_resource type="SpatialMaterial" id=14]
 albedo_color = Color( 0.67451, 0.67451, 0.67451, 1 )
@@ -73,9 +73,11 @@ script = ExtResource( 14 )
 [node name="Player" parent="World" instance=ExtResource( 1 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 1.2, -42 )
 
-[node name="TargetManager" parent="World" instance=ExtResource( 4 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -1.95938, 40 )
-script = ExtResource( 16 )
+[node name="TargetManager2" parent="World" instance=ExtResource( 16 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 40 )
+
+[node name="TargetFake" parent="World" instance=ExtResource( 4 )]
+transform = Transform( 2.20966, 0, 0, 0, 2.20966, 0, 0, 0, 2, -1.2179, -0.374755, 39.6685 )
 
 [node name="Level" type="Spatial" parent="World"]
 
@@ -245,5 +247,5 @@ script = ExtResource( 10 )
 environment = SubResource( 11 )
 
 [connection signal="sens" from="World/Player" to="World/Sens2" method="_on_Player_sens"]
-[connection signal="speedD" from="World/TargetManager" to="World/Speed/ShowSpeed" method="_on_TargetManager_speedD"]
-[connection signal="speedI" from="World/TargetManager" to="World/Speed/ShowSpeed" method="_on_TargetManager_speedI"]
+[connection signal="speedD" from="World/TargetManager2" to="World/Speed/ShowSpeed" method="_on_TargetManager2_speedD"]
+[connection signal="speedI" from="World/TargetManager2" to="World/Speed/ShowSpeed" method="_on_TargetManager2_speedI"]

@@ -28,4 +28,3 @@ func _raise_target() -> void:
 
 func _choose_target() -> int:
 	return randi() % get_child_count()
-

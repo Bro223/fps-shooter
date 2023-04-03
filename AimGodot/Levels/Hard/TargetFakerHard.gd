@@ -7,8 +7,12 @@ var count: int = 0
 var is_up: bool = false
 
 func _process(delta):
+	
+	$AnimationPlayer2.playback_speed = 1
+	yield(get_tree().create_timer(22), "timeout")
 	$AnimationPlayer2.playback_speed = 2
-
+	yield(get_tree().create_timer(20), "timeout")
+	$AnimationPlayer2.playback_speed = 3
 func up() -> void:
 	$AnimationPlayer.play("Pop")
 	visible = true

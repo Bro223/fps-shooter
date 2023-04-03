@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://src/Important/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Hard/Score.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Pausemenu/GUI.gd" type="Script" id=14]
 [ext_resource path="res://Qatar-Gets-A-Forest.png" type="Texture" id=15]
 [ext_resource path="res://Levels/Hard/TargetFake.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Levels/Hard/TargetManagerCustom.gd" type="Script" id=17]
 
 [sub_resource type="SpatialMaterial" id=14]
 albedo_color = Color( 0.67451, 0.67451, 0.67451, 1 )
@@ -75,6 +76,7 @@ transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 1.2,
 
 [node name="TargetManager" parent="World" instance=ExtResource( 4 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -1.95938, 43.2988 )
+script = ExtResource( 17 )
 
 [node name="TargetFake" parent="World" instance=ExtResource( 16 )]
 transform = Transform( 2.34488, 0, 0, 0, 2.34055, 0, 0, 0, 0.981241, 0.172354, -3.27605, 43.3086 )

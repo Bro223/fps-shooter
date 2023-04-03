@@ -52,7 +52,6 @@ tracks/0/keys = {
 }
 
 [node name="Target" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.01888, 1.19245, 0 )
 script = ExtResource( 4 )
 sounds = [ ExtResource( 2 ), ExtResource( 1 ) ]
 

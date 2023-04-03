@@ -1,7 +1,7 @@
 extends Spatial
 
 var previous: int = -1
-var speed: int = 1
+var speed: int = 2
 var seconds: int = 4
 var seconds2: int = 34
 signal speedI(nr)
