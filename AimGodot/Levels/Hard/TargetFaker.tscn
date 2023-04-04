@@ -87,6 +87,7 @@ volume_db = 1.0
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="6"]
 autoplay = "move"
+playback_speed = 1.5
 anims/move = SubResource( 8 )
 
 [connection signal="body_entered" from="Cube/Area" to="." method="_on_Area_body_entered"]

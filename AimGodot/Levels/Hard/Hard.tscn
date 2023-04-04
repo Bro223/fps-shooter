@@ -75,11 +75,11 @@ script = ExtResource( 14 )
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 1.2, -42 )
 
 [node name="TargetManager" parent="World" instance=ExtResource( 4 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -1.95938, 43.2988 )
+transform = Transform( -2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 0, -1.95938, 43.2988 )
 script = ExtResource( 17 )
 
 [node name="TargetFake" parent="World" instance=ExtResource( 16 )]
-transform = Transform( 2.34488, 0, 0, 0, 2.34055, 0, 0, 0, 0.981241, 0.172354, -3.27605, 43.3086 )
+transform = Transform( -2.10814, 0, -3.18321e-07, 0, 2.10814, 0, 3.01992e-07, 0, -2, -0.083008, -1.3998, 41.8844 )
 
 [node name="Level" type="Spatial" parent="World"]
 

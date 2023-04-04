@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://src/Important/Sensitivity/SensShow.gd" type="Script" id=1]
 [ext_resource path="res://src/Important/Targets/ShowSpeed.gd" type="Script" id=2]
@@ -22,6 +22,10 @@
 [ext_resource path="res://Levels/Speed/ShowHistory.gd" type="Script" id=20]
 [ext_resource path="res://Levels/Speed/History.gd" type="Script" id=21]
 [ext_resource path="res://Levels/Speed/LastHistory.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Levels/Speed/TargetFakeSpeed.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Levels/Speed/TargetFakeSpeed2.gd" type="Script" id=24]
+[ext_resource path="res://Levels/Speed/TargetFakeSpeed3.gd" type="Script" id=25]
+[ext_resource path="res://Levels/Speed/TargetFakeSpeed4.gd" type="Script" id=26]
 
 [sub_resource type="ViewportTexture" id=17]
 viewport_path = NodePath("World/Sprite3D/Timer")
@@ -104,8 +108,27 @@ script = ExtResource( 16 )
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 1.2, -42 )
 
 [node name="TargetManager" parent="World" instance=ExtResource( 8 )]
-transform = Transform( -2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 0, 0, 41.0072 )
+transform = Transform( -2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 0, 0, 38.1685 )
 visible = false
+
+[node name="TargetFake" parent="World" instance=ExtResource( 23 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 9.1898, 2.5529, 38.6912 )
+visible = false
+
+[node name="TargetFake2" parent="World" instance=ExtResource( 23 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 3.21966, 2.68469, 47 )
+visible = false
+script = ExtResource( 24 )
+
+[node name="TargetFake3" parent="World" instance=ExtResource( 23 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -3.4493, 2.58695, 47 )
+visible = false
+script = ExtResource( 25 )
+
+[node name="TargetFake4" parent="World" instance=ExtResource( 23 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -9.73057, 2.58695, 47 )
+visible = false
+script = ExtResource( 26 )
 
 [node name="Level" type="Spatial" parent="World"]
 
@@ -123,7 +146,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape" type="CollisionShape" parent="World/Level/Room/Wall"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.58204 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.154785 )
 shape = SubResource( 3 )
 __meta__ = {
 "_edit_lock_": true
@@ -312,6 +335,7 @@ environment = SubResource( 11 )
 [connection signal="timeout" from="World/Sprite3D/Timer/Timers" to="World/Sprite3D/Timer" method="_on_Timers_timeout"]
 [connection signal="sens" from="World/Player" to="World/Sens2" method="_on_Player_sens"]
 [connection signal="timeout" from="World/ScoreView/Timer" to="World/TargetManager" method="_on_Timer_timeout"]
+[connection signal="timeout" from="World/ScoreView/Timer" to="World/TargetFake" method="_on_Timer_timeout"]
 [connection signal="timeout" from="World/ScoreView/Timer" to="World/ScoreView" method="_on_Timer_timeout"]
 [connection signal="acr" from="World/ScoreCounter" to="World/History/ShowHistory" method="_on_ScoreCounter_acr"]
 [connection signal="scr" from="World/ScoreCounter" to="World/History/ShowHistory" method="_on_ScoreCounter_scr"]
