@@ -58,7 +58,7 @@ script = ExtResource( 13 )
 [node name="World" type="Spatial" parent="."]
 
 [node name="Player" parent="World" instance=ExtResource( 5 )]
-transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 1.2, -42 )
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 1.2, -48.115 )
 
 [node name="TargetManager2" parent="World" instance=ExtResource( 6 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 40 )
@@ -129,6 +129,23 @@ __meta__ = {
 }
 
 [node name="CollisionShape" type="CollisionShape" parent="World/Level/Room/Wall4"]
+transform = Transform( 1.23, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 17 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Wall5" type="StaticBody" parent="World/Level/Room"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.714382, 11.739, -45.0418 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Level/Room/Wall5"]
+visible = false
+mesh = SubResource( 16 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Level/Room/Wall5"]
 transform = Transform( 1.23, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 17 )
 __meta__ = {

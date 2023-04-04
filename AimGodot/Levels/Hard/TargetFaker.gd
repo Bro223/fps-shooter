@@ -7,7 +7,7 @@ var count: int = 0
 var is_up: bool = false
 
 func _process(delta):
-	$AnimationPlayer2.playback_speed = 2
+	$AnimationPlayer2.playback_speed = 1.5
 
 func up() -> void:
 	$AnimationPlayer.play("Pop")
