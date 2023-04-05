@@ -166,6 +166,7 @@ light_energy = 0.5
 omni_range = 200.0
 
 [node name="Obstacles" type="Spatial" parent="World/Level"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.14629, 0, -2.22076 )
 
 [node name="1x3x1" type="StaticBody" parent="World/Level/Obstacles"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.545, 0, -22.3486 )
@@ -185,7 +186,7 @@ __meta__ = {
 }
 
 [node name="1x3x2" type="StaticBody" parent="World/Level/Obstacles"]
-transform = Transform( 0.941934, 0, -0.335797, 0, 1, 0, 0.335797, 0, 0.941934, 25.5874, 0, -33.2733 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5874, 0, -33.2733 )
 
 [node name="MeshInstance" type="MeshInstance" parent="World/Level/Obstacles/1x3x2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0 )
@@ -218,7 +219,7 @@ script = ExtResource( 8 )
 [node name="Score" parent="World/ScoreCounter" instance=ExtResource( 2 )]
 
 [node name="Sens" type="Sprite3D" parent="World"]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, -31.4745, 19.3593, 48.5146 )
+transform = Transform( 5.34894, 0, 0, 0, 5.34894, 0, 0, 0, 1, -32.5151, 19.943, 48.5146 )
 flip_h = true
 flip_v = true
 texture = SubResource( 12 )
@@ -231,7 +232,7 @@ script = ExtResource( 7 )
 [node name="Sens" parent="World/Sens2" instance=ExtResource( 3 )]
 
 [node name="Speed" type="Sprite3D" parent="World"]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 30.0997, 19.2848, 48.489 )
+transform = Transform( 4.7223, 0, 0, 0, 4.7223, 0, 0, 0, 1, 31.8466, 20.2252, 48.489 )
 flip_h = true
 flip_v = true
 texture = SubResource( 13 )

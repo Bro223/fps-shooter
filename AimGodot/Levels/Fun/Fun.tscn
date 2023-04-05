@@ -33,7 +33,7 @@ size = Vector2( 110, 30 )
 [sub_resource type="CubeMesh" id=19]
 size = Vector3( 75, 2, 100 )
 
-[sub_resource type="ViewportTexture" id=22]
+[sub_resource type="ViewportTexture" id=26]
 viewport_path = NodePath("World/ScoreCounter")
 
 [sub_resource type="ViewportTexture" id=23]
@@ -167,9 +167,9 @@ light_energy = 0.5
 omni_range = 200.0
 
 [node name="ScoreView" type="Sprite3D" parent="World"]
-transform = Transform( -1, -8.74228e-08, -7.64274e-15, -8.74228e-08, 1, 8.74228e-08, 0, 8.74228e-08, -1, -2, 11.5, 48.13 )
+transform = Transform( -1, -8.74228e-08, -7.64274e-15, -8.74228e-08, 1, 8.74228e-08, 0, 8.74228e-08, -1, -2, 13.4538, 48.13 )
 pixel_size = 0.1
-texture = SubResource( 22 )
+texture = SubResource( 26 )
 
 [node name="ScoreCounter" type="Viewport" parent="World"]
 size = Vector2( 512, 256 )
@@ -183,7 +183,7 @@ script = ExtResource( 3 )
 [node name="Score" parent="World/ScoreCounter" instance=ExtResource( 8 )]
 
 [node name="Sens" type="Sprite3D" parent="World"]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, -31.4745, 19.3593, 48.5146 )
+transform = Transform( 3.84785, 0, 0, 0, 3.84785, 0, 0, 0, 1, -33.9834, 20.6574, 48.5146 )
 flip_h = true
 flip_v = true
 texture = SubResource( 23 )

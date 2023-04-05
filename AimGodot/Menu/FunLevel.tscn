@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Assets/Fonts/VCR_OSD_MONO.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Fonts/BRONSON-Black.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Menu/FunLevel.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFont" id=1]
@@ -16,27 +16,27 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 444.0
-margin_top = 268.0
-margin_right = 579.0
-margin_bottom = 331.0
+margin_left = 422.0
+margin_top = 266.0
+margin_right = 601.0
+margin_bottom = 334.0
 
 [node name="level" type="Label" parent="CenterContainer/VBoxContainer"]
-margin_right = 135.0
-margin_bottom = 15.0
+margin_right = 179.0
+margin_bottom = 20.0
 custom_fonts/font = SubResource( 1 )
 text = "Level selection"
 
 [node name="Easy" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 19.0
-margin_right = 135.0
-margin_bottom = 39.0
+margin_top = 24.0
+margin_right = 179.0
+margin_bottom = 44.0
 text = "Easy"
 
 [node name="Hard" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 43.0
-margin_right = 135.0
-margin_bottom = 63.0
+margin_top = 48.0
+margin_right = 179.0
+margin_bottom = 68.0
 text = "Hard"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Easy" to="." method="_on_Easy_pressed"]

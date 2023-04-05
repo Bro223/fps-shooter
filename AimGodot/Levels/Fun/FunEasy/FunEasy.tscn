@@ -183,7 +183,7 @@ script = ExtResource( 3 )
 [node name="Score" parent="World/ScoreCounter" instance=ExtResource( 8 )]
 
 [node name="Sens" type="Sprite3D" parent="World"]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, -31.4745, 19.3593, 48.5146 )
+transform = Transform( 5.01797, 0, 0, 0, 5.01797, 0, 0, 0, 1, -32.9861, 20.174, 48.5146 )
 flip_h = true
 flip_v = true
 texture = SubResource( 23 )

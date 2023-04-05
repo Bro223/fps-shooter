@@ -90,7 +90,7 @@ script = ExtResource( 5 )
 [node name="World" type="Spatial" parent="."]
 
 [node name="Sprite3D" type="Sprite3D" parent="World"]
-transform = Transform( 5.33704, 0, 0, 0, 4.93621, 0, 0, 0, 0.94835, 0, 20.9918, 48.3647 )
+transform = Transform( 4.58613, 0, 0, 0, 4.2417, 0, 0, 0, 0.94835, 0, 20.4874, 48.3647 )
 flip_h = true
 flip_v = true
 texture = SubResource( 17 )
@@ -254,7 +254,7 @@ __meta__ = {
 }
 
 [node name="ScoreView" type="Sprite3D" parent="World"]
-transform = Transform( -1, -8.74228e-08, -7.64274e-15, -8.74228e-08, 1, 8.74228e-08, 0, 8.74228e-08, -1, -1.01099, 11.6036, 48.13 )
+transform = Transform( -1, -8.74228e-08, -7.64274e-15, -8.74228e-08, 1, 8.74228e-08, 0, 8.74228e-08, -1, -1.01099, 8.9398, 48.13 )
 visible = false
 pixel_size = 0.1
 texture = SubResource( 18 )
@@ -276,7 +276,7 @@ script = ExtResource( 3 )
 [node name="Timerdsa" type="Timer" parent="World/ScoreCounter"]
 
 [node name="Sens" type="Sprite3D" parent="World"]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, -31.4745, 19.3593, 48.5146 )
+transform = Transform( 4.28934, 0, 0, 0, 4.28934, 0, 0, 0, 1, -33.5771, 20.4603, 48.5146 )
 flip_h = true
 flip_v = true
 texture = SubResource( 12 )
@@ -303,7 +303,7 @@ script = ExtResource( 2 )
 [node name="Speed" parent="World/Speed/ShowSpeed" instance=ExtResource( 14 )]
 
 [node name="History" type="Sprite3D" parent="World"]
-transform = Transform( 4.80409, 0, 0, 0, 4.80409, 0, 0, 0, 4.80409, 24.9711, 19.1428, 48.3667 )
+transform = Transform( 4.80409, 0, 0, 0, 4.80409, 0, 0, 0, 4.80409, 24.8882, 18.0395, 48.3667 )
 visible = false
 flip_h = true
 flip_v = true
@@ -318,7 +318,7 @@ script = ExtResource( 20 )
 [node name="HistoryShow" parent="World/History/ShowHistory" instance=ExtResource( 19 )]
 
 [node name="Last" type="Sprite3D" parent="World"]
-transform = Transform( 4.47634, 0, 0, 0, 4.44341, 0, 0, 0, 4.59347, 25.8511, 17.702, 48.1844 )
+transform = Transform( 4.47634, 0, 0, 0, 4.44341, 0, 0, 0, 4.59347, 25.6099, 17.4828, 48.1844 )
 flip_h = true
 flip_v = true
 texture = SubResource( 20 )
