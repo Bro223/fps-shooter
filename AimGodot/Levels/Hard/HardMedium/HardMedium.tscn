@@ -14,7 +14,7 @@
 [ext_resource path="res://src/Important/background.PNG" type="Texture" id=12]
 [ext_resource path="res://Pausemenu/GUI.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Pausemenu/GUI.gd" type="Script" id=14]
-[ext_resource path="res://Qatar-Gets-A-Forest.png" type="Texture" id=15]
+[ext_resource path="res://Pictures/Qatar-Gets-A-Forest.png" type="Texture" id=15]
 [ext_resource path="res://Levels/Hard/HardMedium/TargetManagerMedium.gd" type="Script" id=16]
 [ext_resource path="res://Levels/Hard/TargetFake.tscn" type="PackedScene" id=17]
 

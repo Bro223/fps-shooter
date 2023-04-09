@@ -5,7 +5,7 @@
 [ext_resource path="res://Assets/Models/Target.dae" type="PackedScene" id=3]
 [ext_resource path="res://Levels/Hard/Target.gd" type="Script" id=4]
 [ext_resource path="res://Assets/Models/Material_001.material" type="Material" id=5]
-[ext_resource path="res://asd.png" type="Texture" id=6]
+[ext_resource path="res://Pictures/asd.png" type="Texture" id=6]
 
 [sub_resource type="ArrayMesh" id=4]
 resource_name = "Cylinder"

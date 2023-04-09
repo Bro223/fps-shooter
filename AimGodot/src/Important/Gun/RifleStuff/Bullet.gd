@@ -8,6 +8,5 @@ func fire(muzzle_velocity: float) -> void:
 	add_child(death_timer)
 	death_timer.connect("timeout", self, "queue_free")
 	death_timer.start(lifetime)
-	# fire
 	set_as_toplevel(true)
 	apply_central_impulse(-transform.basis.z * muzzle_velocity)

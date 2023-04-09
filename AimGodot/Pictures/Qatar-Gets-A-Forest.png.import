@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Qatar-Gets-A-Forest.png-c6f68ca92825df9bdf6b74e3a5b968ac.s3tc.stex"
-path.etc2="res://.import/Qatar-Gets-A-Forest.png-c6f68ca92825df9bdf6b74e3a5b968ac.etc2.stex"
+path.s3tc="res://.import/Qatar-Gets-A-Forest.png-f871de74adb67fef991412d1fb7b08e3.s3tc.stex"
+path.etc2="res://.import/Qatar-Gets-A-Forest.png-f871de74adb67fef991412d1fb7b08e3.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Qatar-Gets-A-Forest.png"
-dest_files=[ "res://.import/Qatar-Gets-A-Forest.png-c6f68ca92825df9bdf6b74e3a5b968ac.s3tc.stex", "res://.import/Qatar-Gets-A-Forest.png-c6f68ca92825df9bdf6b74e3a5b968ac.etc2.stex" ]
+source_file="res://Pictures/Qatar-Gets-A-Forest.png"
+dest_files=[ "res://.import/Qatar-Gets-A-Forest.png-f871de74adb67fef991412d1fb7b08e3.s3tc.stex", "res://.import/Qatar-Gets-A-Forest.png-f871de74adb67fef991412d1fb7b08e3.etc2.stex" ]
 
 [params]
 

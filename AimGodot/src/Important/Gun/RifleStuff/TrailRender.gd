@@ -37,7 +37,6 @@ func add_point() -> void:
 		var last_point = points.pop_back()
 		last_point.queue_free()
 
-
 func _draw_trail() -> void:
 	if points.size() < 2:
 		return
@@ -45,11 +44,9 @@ func _draw_trail() -> void:
 	st.begin(Mesh.PRIMITIVE_TRIANGLES)
 	for i in range(points.size() - 1):
 		_points_to_rect(st, points[i], points[i + 1], i)
-	# commit
 	st.generate_normals()
 	$Node/Render.mesh = st.commit()
 	$Node/Render.set_surface_material(0, material)
-
 
 func _points_to_rect(st: SurfaceTool, p1: Position3D, p2: Position3D, idx: float) -> void:
 	var num_points = points.size() - 1
@@ -78,21 +75,18 @@ func _points_to_rect(st: SurfaceTool, p1: Position3D, p2: Position3D, idx: float
 	st.add_vertex(v2)
 	st.add_uv(uv3)
 	st.add_vertex(v3)
-	
 	st.add_uv(uv3)
 	st.add_vertex(v3)
 	st.add_uv(uv2)
 	st.add_vertex(v2)
 	st.add_uv(uv1)
 	st.add_vertex(v1)
-	
 	st.add_uv(uv3)
 	st.add_vertex(v3)
 	st.add_uv(uv4)
 	st.add_vertex(v4)
 	st.add_uv(uv2)
 	st.add_vertex(v2)
-	
 	st.add_uv(uv2)
 	st.add_vertex(v2)
 	st.add_uv(uv4)

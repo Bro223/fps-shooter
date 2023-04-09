@@ -30,8 +30,5 @@ func _raise_target() -> void:
 func _choose_target() -> int:
 	return randi() % get_child_count()
 
-
-
-
 func _on_TargetManager_play():
-	pass # Replace with function body.
+	pass 

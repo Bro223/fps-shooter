@@ -12,8 +12,6 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	get_viewport().warp_mouse(get_viewport().size * 0.5)
 	emit_signal("sens",sensitivity)
-	
-
 
 func _process(delta: float) -> void:
 
@@ -37,5 +35,3 @@ func _process(delta: float) -> void:
 		
 func _get_mouse_speed() -> Vector2:
 	return get_viewport().size * 0.5 - get_viewport().get_mouse_position()
-	
-	
