@@ -34,7 +34,8 @@ _global_script_class_icons={
 
 config/name="AimTraining"
 run/main_scene="res://Menu/Menu.tscn"
-config/icon="res://Assets/Images/icon.png"
+config/icon="res://b02e6bf4-f695-44d9-a72b-09b6d6ee3ef1.png"
+config/windows_native_icon="res://b02e6bf4-f695-44d9-a72b-09b6d6ee3ef1.png"
 
 [autoload]
 
